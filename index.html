@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A safe, local-only educational simulation of subdomain takeover risk.">
+  <title>Subdomain Takeover — ANONDGR</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="ANONDGR home"><span class="brand-mark">A</span> ANONDGR</a>
+      <span class="badge"><span class="dot"></span> SAFE SIMULATION</span>
+    </header>
+
+    <section class="hero" id="home">
+      <p class="eyebrow">SECURITY AWARENESS / 01</p>
+      <h1>Subdomain<br><span>takeover</span></h1>
+      <p class="intro">Learn how an abandoned third-party DNS target can create risk. This page is a local-only simulation—not a scanner and not an exploit.</p>
+
+      <form class="demo-card" id="demo-form">
+        <label for="hostname">Demo hostname</label>
+        <div class="input-row">
+          <input id="hostname" name="hostname" type="text" value="demo.example.invalid" autocomplete="off" spellcheck="false" aria-describedby="input-help">
+          <button type="submit">Run simulation <span aria-hidden="true">↗</span></button>
+        </div>
+        <p class="help" id="input-help">Use a placeholder hostname. No DNS lookups or network requests are made.</p>
+        <div class="result" id="result" role="status" aria-live="polite">
+          <span class="result-icon" aria-hidden="true">✓</span>
+          <div><strong>Simulation ready</strong><p>Press “Run simulation” to view an illustrative result.</p></div>
+        </div>
+      </form>
+    </section>
+
+    <section class="explainer" aria-labelledby="how-title">
+      <div class="section-heading"><p class="eyebrow">THE CONCEPT</p><h2 id="how-title">How the risk happens</h2></div>
+      <div class="steps">
+        <article class="step"><span class="step-number">01</span><h3>DNS points outward</h3><p>A subdomain has a CNAME or other record pointing to a hosted service.</p></article>
+        <article class="step"><span class="step-number">02</span><h3>Resource is removed</h3><p>The external resource is deleted, but the DNS record is left behind.</p></article>
+        <article class="step"><span class="step-number">03</span><h3>Review and remediate</h3><p>Inventory records, verify ownership, and remove stale DNS references promptly.</p></article>
+      </div>
+    </section>
+
+    <aside class="notice"><strong>Use responsibly</strong><p>This demonstration performs no DNS resolution, service enumeration, or resource claiming. Only assess domains you own or are explicitly authorized to test.</p></aside>
+    <footer><span>SUBDOMAIN TAKEOVER</span><span>BY ANONDGR</span><span>LOCAL DEMO · NO NETWORK ACTIVITY</span></footer>
+  </main>
+</body>
+</html>
